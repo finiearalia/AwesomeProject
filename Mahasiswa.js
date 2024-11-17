@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     title: {
       paddingVertical: 12,
       backgroundColor: '#333',
-      color: 'white',
+      color: 'black',
       fontSize: 20,
       fontWeight: 'bold',
       textAlign: 'center',
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       padding: 20,
       borderRadius: 10,
-      backgroundColor: 'white',
+      backgroundColor: 'purple',
       shadowColor: '#000',
       shadowOffset: {
         width: 1,
