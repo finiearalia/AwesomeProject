@@ -6,11 +6,12 @@ import Profil from './App'
 import Mahasiswa from './Mahasiswa'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faUserGraduate } from '@fortawesome/free-solid-svg-icons'
+import { faUserGraduate, faCirclePlus, faUserPen } from '@fortawesome/free-solid-svg-icons'
 import { WebView } from 'react-native-webview';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import  CreateData from './CreateData'
 import Datamahasiswa from './ListData'
+import EditData from './Editdata'
 function HomeScreen() {
   return (
     <CreateData />
@@ -22,10 +23,9 @@ function DataMahasiswaScreen() {
    <Datamahasiswa />
   );
 }
-function WebScreen() {
+function EditScreen() {
   return (
-    <WebView
-        source={{ uri: 'https://github.com/finiearalia' }}
+    <EditData
       />
   );
 }
@@ -36,9 +36,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Profil" component={HomeScreen} options={{ headerShown: false, 
+        <Tab.Screen name="Tambah" component={HomeScreen} options={{ headerShown: false, 
           tabBarIcon: ({ color }) => (
-            <FontAwesomeIcon icon={faUser} size={20} color={color} />
+            <FontAwesomeIcon icon={faCirclePlus} size={20} color={color} />
           ),
          }} />
         <Tab.Screen name="Mahasiswa" component={DataMahasiswaScreen}
@@ -47,10 +47,10 @@ export default function App() {
             <FontAwesomeIcon icon={faUserGraduate} size={20} color={color} />
           ),
          }} />
-        <Tab.Screen name="Github" component={WebScreen}
+        <Tab.Screen name="Edit" component={EditScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <FontAwesomeIcon icon={faGithub} size={20} color={color} />
+            <FontAwesomeIcon icon={faUserPen} size={20} color={color} />
           ),
          }} />
       </Tab.Navigator>

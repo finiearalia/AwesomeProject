@@ -7,7 +7,7 @@ import { faGraduationCap, faChevronRight } from '@fortawesome/free-solid-svg-ico
 
 
 const Listdata = () => {
-const jsonUrl = 'http://192.168.43.147:3000/mahasiswa';
+const jsonUrl = 'http://192.168.217.147:3000/mahasiswa';
 const [isLoading, setLoading] = useState(true);
 const [dataUser, setDataUser] = useState({});
 const [refresh, setRefresh] = useState(false);
